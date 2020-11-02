@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+body {
+  margin-right:0;
+  margin-left:0;
+  margin-top:0;
+  margin-bottom:0;
+  background-color:white;
+  background-image: url("Images/backgroundimg1.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+div.a {
+  position:relative; 
+}
+
+div.b {
+  border-bottom-color:#6fb5bf;
+  border-bottom-style:solid;
+  border-width: thin;
+  width:100vw;
+  height:calc(100vw * (1/17));
+  color:white; 
+  position:absolute;
+  top:0;
+  font-family:'Open Sans Condensed';
+}
+div.c {
+  position:absolute;
+  top:0;
+  font-family:'Open Sans Condensed';
+}
+
+ul.nav {
+  position:absolute;
+  top:1vw;
+  width:50vw;
+  height:calc(50vw * (1/20));
+  right:1vw;
+  list-style-type:none;
+  background-color:transparent;
+}
+
+li.nav {
+  float:right;
+  position:relative;
+  top:0vw;
+  margin-top:0vw;
+}
+
+li.nav a {
+  position:relative;
+  top:0vw;
+  margin-top:0vw;
+  display:inline-block;
+  font-family:'Open Sans Condensed';
+  color:black;
+  text-align: center;
+  padding: 0vh 0.7vw;
+    font-size:1.3vw;
+    text-decoration:none;
+}
+
+a.nav:link, a.nav:visited { 
+    position:relative;
+  top:0vw;
+  margin-top:0vw;
+    color:black;
+}
+
+li.nav a.nav:hover {
+    position:relative;
+  top:0vw;
+  margin-top:0vw;
+    color: #6fb5bf;
+    background-color:transparent;
+}
+
+li.nav a.active {
+    position:relative;
+  top:0vw;
+  margin-top:0vw;
+    color: #6fb5bf;
+    background-color:transparent;
+}
+
+
+.icon-bar {
+  position: fixed;
+  top:12vw;
+  right:0vw;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: calc(1vw * (1/1)) 1vw;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.5vw;
+  border-radius:0.7vw;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #6fb5bf;
+  color: white;
+}
+
+.instagram {
+  background: #dbd17b;
+    color:white;
+}
+.youtube {
+  background: #d95d6e;
+  color: white;
+}
+
+.content {
+  position:fixed;
+  width:95vw;
+  top:8vw;
+}
+
+.leftcontainer {
+  float:left;
+  width:19vw;
+  height:100vw;
+  position:absolute;
+}
+
+.rightcontainer {
+  width:75vw;
+  position:relative;
+  height:75vh;
+  left:20vw;
+  float:left;
+  overflow-y:auto;
+  scroll-behavior: smooth;
+}
+
+#mySidenav a {
+  position:fixed;
+  left: 4vw;
+  transition: 0.3s;
+  padding: 0.5vw;
+  width: 11vw;
+  text-decoration: none;
+  font-family: 'Open Sans Condensed';
+  font-size: 1.3vw;
+  color:white;
+  border-radius: 0.2vw;
+  background-color: #6fb5bf;
+}
+
+#mySidenav a:hover:not(.active) {
+  background-color:#5f738a;
+  width:12vw;
+}
+
+#QuartetCantare {top: 8vw;}
+
+#ClioMuses {top: 11vw;}
+
+#BackToBach {top: 14vw;}
+
+.container {
+  left:0vw;
+  width:75vw;
+  background-color:#ededed;
+  border-radius:0.2vw;
+}
+
+.info {
+  font-size:1.3vw;
+  line-height:1.5vw;
+  margin-left:2vw;
+  font-family:'Lato';
+  color:black;
+}
+
+.inside-grid-container {
+  margin-top:2vw;
+  display: grid;
+  grid-template-columns: 36vw 34vw;
+  grid-template-rows: auto auto;
+  grid-gap: 2vw;
+  padding: 0.5vw;
+}
+
+
+.name {
+    font-size:3.5vw; 
+  color:black; 
+  text-align:center;
+  font-family:'Open Sans Condensed';
+  letter-spacing: 0.5vw;
+  line-height:4vw;
+}
+
+.imagecontainter {
+  text-align:right;
+}
+
+#firstImage {
+  width:35vw;
+  height:auto;
+}
+
+#highlightimg {
+  width:30vw;
+  height:auto;
+}
+
+#video {
+  width:30vw;
+  height: calc(30vw * (480/915));
+}
+
+.titlecontainer {
+  text-align:center;
+  display:inline-block;
+    width:7vw;
+    height:calc(7vw * (1/1));
+    border: none;
+    background-color:#6fb5bf;
+    color: white;
+    font-size: 1.5vw;
+    border-radius:100%;
+    line-height: 7vw;
+    font-family:'Open Sans Condensed';
+    letter-spacing:0.3vw;
+}
+
+div.virtual {
+  font-size:2.5vw; 
+  color:black; 
+  text-align:center;
+  font-family:'Open Sans Condensed';
+  line-height:3vw;
+}
+
+.clio-container {
+  margin-top:2vw;
+  display: grid;
+  grid-template-columns: 24vw 21vw 21vw;
+  grid-gap: 2vw;
+  width:60vw;
+}
+
+.videoLeft {
+  text-align:right;
+}
+
+.videoCenter {
+  text-align:center;
+}
+
+.videoRight {
+  text-align:left;
+}
+
+
+.clioVideos {
+  width:21vw;
+  height: calc(21vw * (480/915));
+}
+
+@media only screen and (max-width:1024px) {
+  li.nav a {
+      font-size:2vw;
+  }
+}
+
+@media only screen and (max-width:414px) {
+  ul.nav {
+    top:-1.5vw;
+  }
+} 
+
+@media only screen and (orientation:portrait) {
+  .leftcontainer {
+    width: 19vw;
+  }
+
+  .rightcontainer {
+      width:75vw;
+      left:19.5vw;
+  }
+
+  #mySidenav a {
+      left: 2vw;
+      width: 14.5vw;
+      font-size: 2.5vw;
+  }
+
+  #mySidenav a:hover:not(.active) {
+      width:14.5vw;
+  }
+
+  .container {
+      width:75vw;
+  }
+
+  #QuartetCantare {top: 8vw;}
+
+  #ClioMuses {top: 14vw;}
+
+  #BackToBach {top: 20vw;}
+
+  .inside-grid-container {
+    grid-template-columns:34vw 34vw;
+    grid-template-rows: auto auto;
+    grid-gap: 1vw;
+    padding: 0.5vw;
+  }
+}
+
+
+@media only screen and (orientation:portrait) and (min-height:375.1px) and (max-height:768px) {
+
+    .info {
+      line-height:1.7vw;
+      font-size:1.5vw;
+    }
+}
+
+
+@media only screen and (orientation:portrait) and (height:600px) and (width:450px) {
+
+    .info {
+      line-height:1.7vw;
+      font-size:1.5vw;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-height:768.1px) and (max-height:812px) {
+
+    .info {
+      line-height:1.9vw;
+      font-size:1.7vw;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-height:812.1px) and (max-height:823px) {
+    .info {
+      line-height:1.6vw;
+      font-size:1.4vw;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-height:823.1px) and (max-height:1024px) {
+
+    .info {
+      line-height:2.1vw;
+      font-size:1.9vw;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-height:1024.1px) and (max-height:1366px) {
+
+    .info {
+      line-height:1.5vw;
+      font-size:1.3vw;
+    }
+}
+
+</style>
+</head>
+
+<body>
+  <div class="a">
+    <div class ="b"> </div>
+    <div class ="c" style="margin-left: 2vw; margin-top:1vw; font-size:2.25vw; color:black; letter-spacing: 1vw;"> GRACE HUH </div>
+      <ul class="nav">
+          <li class="nav"><a class= "active" href="community.html">Community</a></li>
+          <li class="nav"><a class= "nav" href="repertoire.html">Repertoire </a></li>
+          <li class="nav"><a class= "nav" href="media.html">Media </a></li>
+          <li class="nav"><a class= "nav" href="highlights.html">Highlights </a></li>
+          <li class="nav"><a class= "nav" href="about.html">About </a></li>
+          <li class="nav"><a class= "nav" href="index.html">Home </a></li>
+      </ul>
+  </div>
+  <div class="icon-bar">
+      <a href="https://www.facebook.com/profile.php?id=100008409122000" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a> 
+      <a href="https://instagram.com/gracehuh.violin/" target="_blank"class="instagram"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCP50rnkDEDwn4zQIJAdvXZA?view_as=subscriber" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a> 
+  </div>
+  <div class="content">
+    <div class="leftcontainer">
+      <div id="mySidenav" class="sidenav">
+          <a href="#quartetCantare" id="QuartetCantare">Quartet Cantare</a>
+          <a href="#clioMuses" id="ClioMuses">Clio Muses</a>
+          <a href="#backToBach" id="BackToBach">Back to Bach</a>
+      </div>
+    </div>
+    <div class="rightcontainer">
+      <div class="container" style="margin-top:0vw">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="name" id="quartetCantare">
+            <div> <b>Quartet Cantare, Co-Founder, 2018-Present</b> </div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "firstImage" src="Images/img5.jpg" alt="Quartet Cantare image">
+          </div>
+          <div>
+            <div class="info"> 
+              <div>Quartet Cantare finds a love in fostering relationships with special needs families and enhancing their emotional and social develop through performances and interactive games. We perform for them through Santa Clara Therapeutic Recreation Services and an annual Christmas concert at the Post-Secondary program at Wilcox while also talking, playing games, and watching movies post performances. Aside from our focus on forming relationships with special needs families, we also tackle a wide variety of issues throughout the community such as fundraising for fire-devastated families during the Northern California Wildfires and public works in the community as well as creating performances dedicated to the Health Care Heroes Worker during the pandemic. </div>
+            </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div> 3-29-19 </div>
+          </div>
+          <div class="imagecontainter">
+            <iframe id="video" src="https://youtube.com/embed/OnK43PEFhCI"> </iframe> 
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Videos Dedicated to Healthcare Heroes Against COVID-19</div>
+            <br>
+            <div> This video is just one of the many we've created dedicated to healthcare heroes. We grealty appreciate the risks they take to help our community. </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>12-31-19</div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "highlightimg" src="Images/img6.jpg" alt="img">
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Magical Bridge Santa Clara Project Talent Showcase</div>
+            <br>
+            <div> Quartet Cantare raised $191 for the Magical Bridge Playground Project, which goes beyond the typical playground structure to create one friendly to the "growing autistic population, cognivitely challenged, visually and hearing impaired, physically limited, and the aging population."</div>
+          </div>
+        </div>
+        <hr style="width:70vw; border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>08-10-19</div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "highlightimg" src="Images/img7.jpg" alt="img">
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Aegis Living Fremont Assited Living | Memory Care</div>
+            <br>
+            <div> Quartet Cantare reaches out to the senior community and performs favorites such as "The Prayer," "Gabriel's Oboe," "Music of the Night" from Phantom of the Opera, and many more at Aegis Living Fremont Assisted Living. </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>06-12-20</div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "highlightimg" src="Images/img8.jpg" alt="img">
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Therapeutic Recreation Services Fundraiser</div>
+            <br>
+            <div> Quartet Cantare partners with Jasmine Thai Restaurant. In exchange for performng, 20% of proceeds benefit recreation programs for individuals with disabilities. We raised $350 for Santa Clara Therapeutic Recreation Services! </div>
+          </div>
+        </div>
+        <hr style="width:70vw; border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>03-29-20</div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "highlightimg" src="Images/img9.jpg" alt="img">
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Performance at Therapeutic Recreation Services</div>
+            <br>
+            <div> After performing at Therapeutic Recreation Services, Quartet Cantare talks with and plays games with the individuals in the program, mainly adults with special needs. We played fun music for them such as "A Million Dreams" from The Greatest Showman and "He's a Pirate" from Pirates of the Carribean. </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>12-23-18</div>
+          </div>
+          <div class="imagecontainter">
+            <iframe id="video" src="https://youtube.com/embed/QruYwu899vM"></iframe>
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Northern California Fire Benefit Concert</div>
+            <br>
+            <div> In light of the California Fires, Quartet Cantare organized and performed in its Northern California Fire Benefit Concert to raise money for fire devasted families. We raised a total of $10,570! </div>
+          </div>
+        </div>
+        <hr style="width:70vw; border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>12-21-18</div>
+          </div>
+          <div class="imagecontainter">
+            <iframe id="video" src="https://youtube.com/embed/QMaJKK5h6Cg"></iframe>
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Christmas Concert for the Post Secondary Special Education Students at the Wilcox Post-Secondary Program</div>
+            <br>
+            <div> Quartet Cantare performs in this annual Christmas Concert for the Special Education Students at Wilcox Post-Secondary Program. Post performance, we celebrate the holidays together by watching The Polar Express and eating sour cream mashed potatoes and mac and cheese :) </div>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br><br><br><br>
+
+      <div class="container" style="margin-top:0vw">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="name" id="clioMuses">
+            <div> <b>Clio Muses, <br> Co-Founder, 2016-Present </b></div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "firstImage" src="Images/img13.jpg" alt="Clio Muses image">
+          </div>
+          <div>
+            <div class="info"> 
+              <div>Clio Muses was co-founded by me and a group of friends in 2016 and performs at Cupertino Healthcare & Wellness Center monthly, a rehabilitation center for seniors. In light of the Coronavirus, we still wanted to share our music with the elderly and switched to a virtual platform: The 'Clio' Project. Every other week, we send senior homes, nursing homes, rehabilitation centers, and hospices throughout California a 15 minute clip of a variety of pieces. Check out our music below!</div>
+            </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <br>
+        <div class="virtual"> The 'Clio' Project Videos in Response to COVID-19 </div>
+        <div class="clio-container">
+          <div class="videoLeft">
+            <iframe class="clioVideos" src="https://youtube.com/embed/3DkoANcha2Q"></iframe>
+          </div>
+          <div class="videoCenter">
+            <iframe class="clioVideos" src="https://youtube.com/embed/BtzH2ns6xUY"></iframe>
+          </div>
+          <div class="videoRight">
+            <iframe class="clioVideos" src="https://youtube.com/embed/5Ta-416j5hA"></iframe>
+          </div>
+          <div class="videoLeft">
+            <iframe class="clioVideos" src="https://youtube.com/embed/snLyc0Gv9w4"></iframe>
+          </div>
+          <div class="videoCenter">
+            <iframe class="clioVideos" src="https://youtube.com/embed/PA0tblXw4B0"></iframe>
+          </div>
+          <div class="videoRight">
+            <iframe class="clioVideos" src="https://youtube.com/embed/6_yVOpod_Bo"></iframe>
+          </div>
+          <div class="videoLeft">
+            <iframe class="clioVideos" src="https://youtube.com/embed/pT4lUw_0jqI"></iframe>
+          </div>
+          <div class="videoCenter">
+            <iframe class="clioVideos" src="https://youtube.com/embed/rfVi38rZVqs"></iframe>
+          </div>
+          <div class="videoRight">
+            <iframe class="clioVideos" src="https://youtube.com/embed/HQPl1r0g1Q4"></iframe>
+          </div>
+          <div class="videoLeft">
+            <iframe class="clioVideos" src="https://youtube.com/embed/FFnjIfrATmk"></iframe>
+          </div>
+          <div class="videoCenter">
+            <iframe class="clioVideos" src="https://youtube.com/embed/ymPJWGsS6CE"></iframe>
+          </div>
+          <div class="videoRight">
+            <iframe class="clioVideos" src="https://youtube.com/embed/2XSdtTwiIRk"></iframe>
+          </div>
+        </div>
+        <br>
+      </div>
+      <br><br><br><br>
+
+      <div class="container" style="margin-top:0vw">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="name" id="backToBach">
+            <div> <b>Back to Bach <br> Co-Founder, 2019-Present </b></div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "firstImage" src="Images/img10.jpg" alt="Back to Bach Image">
+          </div>
+          <div>
+            <div class="info"> 
+              <div> Back to Bach is an international non-profit program whose mission is to "inspire and develop music and arts education to children while teaching them the value of hard work and passion." We hope to make classical music more broadly accessible by implementing music in the curriculum of public and private schools. We have also partnered with renowned music conservatories and education programs to further promote the arts in schools. We give presentations and performances to children and encourage them to pick up an instrument.</div>
+            </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>05-27-20</div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "highlightimg" src="Images/img11.jpg" alt="img">
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Performance for UCSF Medical Center through Zoom</div>
+            <br>
+            <div> During the Coronavirus shelter-in-place, all Back to Bach members in the Alameda County Branch performed solo music for UCSF Medical Center's staff and cafeteria. </div>
+          </div>
+        </div>
+        <hr style="width:70vw;border-top:0.1vw solid #6fb5bf;">
+        <div class="inside-grid-container">
+          <div> </div>
+          <div class="titlecontainer">
+            <div>10-11-19</div>
+          </div>
+          <div class="imagecontainter">
+            <img id= "highlightimg" src="Images/img12.jpg" alt="img">
+          </div>
+          <div class="info">
+            <div style="font-family:'Open Sans Condensed';font-size: 1.7vw;color:black;margin-left:-1vw;line-height:2.2vw">Monarch Christian School</div>
+            <br>
+            <div> At Monarch Christian School, Back to Bach gave a live presentation to its students showing the importance of practicing and encouraging them to pick up an instrument through games and performances. </div>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
