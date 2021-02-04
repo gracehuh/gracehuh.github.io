@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Calligraffitti' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+body {
+  margin-right:0;
+  margin-left:0;
+  margin-top:0;
+  margin-bottom:0;
+  background-color:white;
+}
+div.a {
+  position:relative; 
+}
+
+.namecontainer {
+  position: relative;
+  font-family:Lato;
+  text-align:right;
+  line-height:5vw;
+}
+
+.nameblock {
+  position: absolute;
+  bottom: 7vw;
+  left: 2vw;
+  color:#6fb5bf;;
+}
+
+#img1 {
+  width:100vw;
+  height:auto;
+  top:0;
+}
+div.b {
+  border-bottom-color:#6fb5bf;
+  border-bottom-style:solid;
+  border-width: thin;
+  width:100vw;
+  height:calc(100vw * (1/17));
+  color:white; 
+  position:absolute;
+  top:0;
+  font-family:'Open Sans Condensed';
+}
+div.c {
+  position:absolute;
+  top:0;
+  font-family:'Open Sans Condensed';
+}
+
+ul.nav {
+  position:absolute;
+  top:1vw;
+  width:50vw;
+  height:calc(50vw * (1/20));
+  right:1vw;
+  list-style-type:none;
+  background-color:black;
+}
+
+li.nav {
+  float:right;
+  position:relative;
+  top:0vw;
+  margin-top:0vw;
+}
+
+li.nav a {
+  position:relative;
+  top:0vw;
+  margin-top:0vw;
+  display:inline-block;
+  font-family:'Open Sans Condensed';
+  color: white;
+  text-align: center;
+  padding: 0vh 0.8vw;
+    font-size:1.3vw;
+    text-decoration:none;
+}
+
+a.nav:link, a.nav:visited { 
+    position:relative;
+  top:0vw;
+  margin-top:0vw;
+    color:white;
+}
+
+li.nav a.nav:hover {
+    position:relative;
+  top:0vw;
+  margin-top:0vw;
+    color: #6fb5bf;
+    background-color:black;
+}
+
+li.nav a.active {
+    position:relative;
+  top:0vw;
+  margin-top:0vw;
+    color: #6fb5bf;
+    background-color:#000000;
+}
+
+
+.icon-bar {
+  position: fixed;
+  top:12vw;
+  right:0vw;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: calc(1vw * (1/1)) 1vw;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 1.5vw;
+  border-radius:0.7vw;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #6fb5bf;
+  color: white;
+}
+
+.instagram {
+  background: #dbd17b;
+    color:white;
+}
+.youtube {
+  background: #d95d6e;
+  color: white;
+}
+
+.content {
+  margin-right:7vw;
+  position:relative;
+  width:100vw;
+  margin-top:4vw;
+}
+
+#img2 {
+  width:50vw;
+  height:calc(50vw * (1/1));
+  top:0;
+}
+
+
+#leftcontainer1 {
+  float:left;
+  width: 50vw;
+  height:calc(50vw * (1/1));
+}
+
+#rightcontainer1 {
+  float:left;
+  width:50vw;
+  height:calc(50vw * (1/1));
+}
+
+#leftcontainer2 {
+  float:left;
+  width:50vw;
+  height:calc(50vw * (1/1));
+}
+
+#rightcontainer2 {
+  float:left;
+  width:50vw;
+  height:calc(50vw * (1/1));
+}
+
+#textbox {
+  padding:2vw;
+}
+
+#img3 {
+  width:50vw;
+  height:calc(50vw * (1/1));
+  top:0;
+}
+
+.biotext {
+  color:black; 
+  margin-left:2vw; 
+  margin-right:4vw; 
+  font-family:Lato; 
+  line-height:1.7vw;
+  font-size:1.1vw;
+}
+
+#paragraph1 {
+  margin-top:0.5vw;
+}
+
+#paragraph2 {
+  margin-top:4vw;
+}
+
+.footerContainer {
+  width:100vw;
+  margin-top:107vw;
+  height:10.5vw;
+  position:relative;
+}
+
+#leftcontainer3 {
+  float:left;
+  width:82vw;
+  height:8vw;
+}
+
+#rightcontainer3 {
+  margin-top:0.5vw;
+  float:left;
+  width:18vw;
+  height:7.5vw;
+}
+
+
+.bottom-icon-bar {
+  position:relative;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bottom-icon-bar a {
+  display: block;
+  width:3vw;
+  height:4.5vw;
+  text-align: center;
+  padding: calc(1vw * (1/1)) 1vw;
+  transition: all 0.3s ease;
+  color: black;
+  font-size: 1.5vw;
+  border-radius:0.7vw;
+}
+
+.bottom-icon-bar a:hover {
+  color:#6fb5bf;
+}
+
+.bottom-facebook {
+  background: white;
+    margin-top:2.5vw;
+}
+
+.bottom-instagram {
+  background:white;
+  margin-top:-4.5vw;
+
+}
+
+.bottom-youtube {
+  background: white;
+  margin-top:-4.5vw;
+}
+
+.contactText {
+  margin-left:0vw; 
+  font-family:Open Sans Condensed; 
+  line-height:2.5vw; 
+  font-size:1.8vw; 
+  color:#6fb5bf; 
+  letter-spacing: 0.2vw;
+}
+
+@media only screen and (max-width:1024px) {
+  li.nav a {
+      font-size:2vw;
+  }
+}
+
+@media only screen and (max-width:414px) {
+  ul.nav {
+    top:-1.5vw;
+  }
+}
+
+@media only screen and (orientation:portrait),(max-width:1024px) {
+  #img2 {
+    width:0vw;
+    height:0vw;
+  }
+
+  #leftcontainer1 {
+    width:0vw;
+    height:0vw;
+  }
+
+  #rightcontainer1 {
+    width:100vw;
+    height:auto;
+  }
+
+  #leftcontainer2 {
+    width: 100vw;
+    height:auto;
+  }
+
+  #rightcontainer2 {
+    width:0vw;
+    height:0vw;
+    background-color:blue;
+    margin-top:-100vw;
+  }
+
+  #img3 {
+    width:0vw;
+    height:0vw;
+  }
+
+  #content {
+    margin-top:0vw;
+  }
+
+  #paragraph1 {
+    margin-top:0vw;
+  }
+
+  #paragraph2 {
+    margin-top:0vw;
+  }
+}
+
+@media only screen and (orientation:portrait) {
+  #leftcontainer3 {
+    float:left;
+    width:70vw;
+    height:11vw;
+    margin-top:-2.5vw;
+  }
+
+  #rightcontainer3 {
+    margin-top:-2.5vw;
+    float:left;
+    width:30vw;
+    height:11vw;
+  }
+
+  .footerContainer {
+    width:100vw;
+    margin-top:107vw;
+    height:12vw;
+    position:relative;
+  }
+}
+
+@media only screen and (orientation:landscape) and (max-width:1024px) {
+  #leftcontainer3 {
+    float:left;
+    width:70vw;
+    height:13vw;
+    margin-top:-1vw;
+  }
+
+  #rightcontainer3 {
+    margin-top:-1vw;
+    float:left;
+    width:30vw;
+    height:13vw;
+  }
+}
+
+@media only screen and (max-width:1024px) {
+  .biotext {
+    line-height:3vw;
+    font-size:2vw;
+  }
+}
+
+@media only screen and (max-width:414px) {
+  .biotext {
+    line-height:3.3vw;
+    font-size:2.3vw;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <div class="a">
+    <div class="namecontainer">
+        <picture>
+          <source id="img1" media="(orientation: landscape)" srcset="Images/img1.jpg">
+          <source id="img1" media="(orientation: portrait)" srcset="Images/altimg1.jpg">
+          <img id="img1" src="Images/img1.jpg" alt="image">
+        </picture>
+        <div class="nameblock">
+          <div style="font-size:6vw; letter-spacing:0vw; "> Grace Huh </div>
+          <div style="font-size:2.5vw"> Violinist </div>
+        </div>
+    </div>
+    <div class ="b"> </div>
+    <div class ="c" style="margin-left: 2vw; margin-top:1vw; font-size:2.25vw; color:white; letter-spacing: 1vw;"> GRACE HUH </div>
+    <ul class="nav">
+      <li class="nav"><a class= "nav" href="community.html">Community</a></li>
+      <li class="nav"><a class= "nav" href="repertoire.html">Repertoire </a></li>
+      <li class="nav"><a class= "nav" href="media.html">Media </a></li>
+      <li class="nav"><a class= "nav" href="highlights.html">Highlights </a></li>
+      <li class="nav"><a class= "nav" href="about.html">About </a></li>
+      <li class="nav"><a class= "active" href="index.html">Home </a></li>
+    </ul>
+  </div>
+  <div class="icon-bar">
+      <a href="https://www.facebook.com/profile.php?id=100008409122000" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a> 
+      <a href="https://instagram.com/gracehuh.violin/" target="_blank"class="instagram"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCP50rnkDEDwn4zQIJAdvXZA?view_as=subscriber" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a> 
+  </div>
+  <div class="content">
+    <div id="leftcontainer1">
+        <img id="img2" src="Images/img2.jpg" alt="image">
+    </div>    
+    <div id="rightcontainer1">
+      <div style="color:#6fb5bf; margin-left:2vw; margin-right:4vw; font-family:'Open Sans Condensed'; letter-spacing: 0.7vw;font-size:3.5vw;margin-top:1vw">Biography</div>
+      <p class="biotext" id="paragraph1" > Eighteen-year-old violinist Grace Huh is a Senior at Lynbrook High School. Currently, she is a student of Ian Swensen at the San Francisco Conservatory of Music Pre-College Division. Her previous private teachers include Li Lin and Wei He.</p>
+      <p class="biotext"> Grace made her solo debut at the age of twelve with the Palo Alto Philharmonic Orchestra and has since then soloed with the California Youth Symphony Senior Orchestra, Diablo Valley College Philharmonic Orchestra, KAMSA Youth Symphony Orchestra, San Francisco Chamber Orchestra, and the Golden State Youth Orchestra. As the Yen Liang Young Artist Competition First Place winner, she will perform with the Diablo Symphony Orchestra. </p>
+      <p class="biotext"> Grace has won numerous competitions internationally and across the nation, most recently as a 2021 YoungArts Finalist, 2021 YoungArts Silver Award Winner, and U.S. Presidential Scholars in the Arts Candidate as nominated by National YoungArts Foundation. Other awards include Semi-Finalist in the international Kosciuszko Foundation Wieniawski Violin Competition in 2020, 2020 Merit winner of the National YoungArts Foundation, First Place and the DVC Philharmonic Award at the DVC/HNU Young Artist String Competition in 2018, First Place at the Pacific Musical Society Scholarship Competition in 2015 and 2018, and the Nafisa Taghioff Prize at the Fremont Symphony Young Artist Competition in 2018.</p>
+      <p class="biotext"> A devoted orchestra musician, Grace has been a violinist in the San Francisco Symphony Youth Orchestra for four seasons, with which she performed in several acclaimed concert venues, including the Elbphilharmonie, Berliner Philharmonie, and Vienna Musikverein. She was also a full scholarship student at New York String Orchestra Seminar, performing on Carnegie Hall’s Stern Auditorium/Perelman Stage. In addition, she was Co-Concertmaster of Lynbrook High School Symphony Orchestra and Chamber Orchestra, and both Soloist and Co-Concertmaster of KAMSA Youth Symphony Orchestra, in which she was a member of for seven seasons. </p>
+    </div>
+    <div id="leftcontainer2">
+        <p class="biotext" id="paragraph2"> Grace is an avid chamber player, participating in the chamber music program at SFCM Pre-College Division and being invited to read through Haydn Quartets weekly with SFCM’s Chair of Chamber Program Dimitri Murrath and college students until the CoronaVirus outbreak. She has studied chamber music at Susan Bates’ Young Chamber Musicians and also with prominent artists such as Bonnie Hampton, Sylvia Rosenberg, Kathleen Winkler, and Ivan Chan at New York String Orchestra Seminar and various summer festivals such as Morningside Music Bridge International Music Festival in Poland as a full scholarship student, YellowBarn Young Artists Program, Bowdoin International Music Festival, Center Stage Strings, Vivac-e Virtual Music Festival, Encore Chamber Music Summer Academy, and Virtual Valhalla Summer School of Music. This summer, she will again attend Morningside Music Bridge International Music Festival in Boston as a full scholarship student.</p>
+        <p class="biotext"> Grace has had the privilege to perform in masterclasses and work with acclaimed artists such as James Ehnes, Midori Goto, Ning Feng, Noah Bendix-Balgley, Joseph Swensen, Miriam Fried, Ani Kavafian, David Kim, Jan Sloman, Almita Vamos, William van der Sloot, and Simon James.</p>
+        <p class="biotext"> Outside of the concert hall, Grace actively contributes to her community through music, such as President of Music for Community, her school club that teaches the basics of music at her local elementary school; Co-Founder of Clio Muses, a group that performs monthly at Cupertino Healthcare and Wellness Center since 2016; Co-Founder of Quartet Cantare, a group that has raised over $10,000 for fire-devastated families in Northern California Wildfires and also performs for special needs children and adults; and Co-Founder of the Back to Bach Project in Alameda County Region, whose initiative is to inspire and encourage young school children to learn musical instruments. In light of the Coronavirus, Clio Muses has started a virtual platform called The ‘Clio’ Project, in which they share a 15 minute clip of 60s or 70s hit songs to senior homes, nursing homes, rehabilitation centers, and hospices throughout the Bay Area. </p>
+      </div>    
+      <div id="rightcontainer2">
+        <img id="img3" src="Images/img3.jpg" alt="image">
+      </div>
+  </div> 
+  <div class="footerContainer">
+    <hr style="width:100vw;border-top:0.2vw solid #6fb5bf;">
+    <div id="leftcontainer3">
+      <div style="margin-left:2.5vw; font-family:'Open Sans Condensed'; margin-top:0vw; font-size:2.25vw; color:#6fb5bf; letter-spacing: 0.2vw"> Grace Huh </div>
+      <div class="biotext" style="margin-left:2.5vw"> Created by Grace Huh using HTML and CSS </div>
+      <div class="bottom-icon-bar">
+        <a href="https://www.facebook.com/profile.php?id=100008409122000" class="bottom-facebook" style="margin-left:2vw" target="_blank"><i class="fa fa-facebook"></i></a> 
+        <a href="https://instagram.com/gracehuh.violin/" style="margin-left:5vw" target="_blank"class="bottom-instagram"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCP50rnkDEDwn4zQIJAdvXZA?view_as=subscriber" class="bottom-youtube" style="margin-left:8vw" target="_blank"><i class="fa fa-youtube"></i></a> 
+        </div>
+    </div>
+    <div id="rightcontainer3">
+      <div class="biotext contactText"> Contact </div>
+      <div class="biotext"> San Jose, CA | 95129 </div>
+      <div class="biotext"> gracehuh02@gmail.com </div>
+    </div>
+  </div>
+</body>
+</html>
